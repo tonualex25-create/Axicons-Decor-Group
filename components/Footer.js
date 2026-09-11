@@ -48,7 +48,7 @@ export default function Footer() {
             <h4>Contact</h4>
             <ul>
               <li><a href="tel:+37360364435">+373 60 364 435</a></li>
-              <li><a href="mailto:contact@axiconsdecor.md">contact@axiconsdecor.md</a></li>
+              <li><a href="mailto:axiconsdecorgrup@mail.ru">axiconsdecorgrup@mail.ru</a></li>
               <li><a href="#">Chișinău, Moldova</a></li>
             </ul>
           </div>

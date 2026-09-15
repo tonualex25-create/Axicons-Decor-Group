@@ -27,9 +27,9 @@ export const metadata = {
     template: "%s — Axicons Decor Grup",
   },
   description:
-    "Amenajări de fațadă la cheie în Chișinău — termoizolare ETICS, fațade ventilate, vopsire și finisaje decorative. Consultanță gratuită și deviz transparent.",
+    "Amenajări de fațadă la cheie în Chișinău — termoizolare, fațade ventilate, vopsire și finisaje decorative. Consultanță gratuită și deviz transparent.",
   keywords: [
-    "fațade",
+    "fațade axicons",
     "termoizolare fațadă",
     "fațade ventilate",
     "renovare fațadă",
@@ -42,7 +42,7 @@ export const metadata = {
     title: "Axicons Decor Grup — Fațade, termoizolare și finisaje exterioare",
     description:
       "Amenajări de fațadă la cheie — termoizolare, fațade ventilate, vopsire și finisaje decorative.",
-    url: "https://axiconsdecor.md",
+    url: "https://axicons.md",
     siteName: "Axicons Decor Grup",
     locale: "ro_RO",
     type: "website",

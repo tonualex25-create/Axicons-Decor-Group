@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://axiconsdecor.md/sitemap.xml",
+    sitemap: "https://axicons.md/sitemap.xml",
   };
 }

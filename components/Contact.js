@@ -121,9 +121,20 @@ export default function Contact() {
                 checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
               />
-              Sunt de acord ca datele mele să fie folosite pentru a fi
-              contactat/ă de Axicons Decor Grup în legătură cu această
-              solicitare.
+              <span>
+                Sunt de acord ca datele mele să fie folosite pentru a fi
+                contactat/ă de Axicons Decor Grup în legătură cu această
+                solicitare, conform{" "}
+                <a
+                  href="/confidentialitate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Politicii de confidențialitate
+                </a>
+                .
+              </span>
             </label>
             {errors.consent && <small className="err">{errors.consent}</small>}
           </div>

@@ -55,9 +55,9 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {year} Axicons Decor Grup. Toate drepturile rezervate.</span>
-          <span>Design &amp; execuție — Axicons Decor Grup</span>
-        </div>
+  <span>© {year} Axicons Decor Grup. Toate drepturile rezervate.</span>
+  <a href="/confidentialitate">Politica de confidențialitate</a>
+</div>
       </div>
     </footer>
   );

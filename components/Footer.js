@@ -35,13 +35,16 @@ export default function Footer() {
 
           <div className="footer-col">
             <h4>Navigare</h4>
-            <ul>
-              <li><a href="#top">Acasă</a></li>
-              <li><a href="#lucrari">Lucrări</a></li>
-              <li><a href="#calculator">Calculator</a></li>
-              <li><a href="#beneficii">Beneficii</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div className="footer-col">
+  <h4>Navigare</h4>
+  <ul>
+    <li><a href="/#top">Acasă</a></li>
+    <li><a href="/#lucrari">Lucrări</a></li>
+    <li><a href="/#calculator">Calculator</a></li>
+    <li><a href="/#beneficii">Beneficii</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</div>
           </div>
 
           <div className="footer-col">

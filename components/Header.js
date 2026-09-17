@@ -28,11 +28,12 @@ export default function Header() {
 
         <nav>
           <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-            <li><a href="#top" onClick={() => setIsOpen(false)}>Acasă</a></li>
-            <li><a href="#calculator" onClick={() => setIsOpen(false)}>Calculator</a></li>
-            <li><a href="#beneficii" onClick={() => setIsOpen(false)}>Beneficii</a></li>
-            <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
-          </ul>
+  <li><a href="/#top" onClick={() => setIsOpen(false)}>Acasă</a></li>
+  <li><a href="/#lucrari" onClick={() => setIsOpen(false)}>Lucrări</a></li>
+  <li><a href="/#calculator" onClick={() => setIsOpen(false)}>Calculator</a></li>
+  <li><a href="/#beneficii" onClick={() => setIsOpen(false)}>Beneficii</a></li>
+  <li><a href="/#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+</ul>
         </nav>
 
         <a className="nav-phone" href="tel:+37360364435">

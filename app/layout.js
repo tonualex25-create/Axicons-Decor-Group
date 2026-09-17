@@ -39,14 +39,22 @@ export const metadata = {
     "constructii",
   ],
   openGraph: {
-    title: "Axicons Decor Grup — Fațade, termoizolare și finisaje exterioare",
-    description:
-      "Amenajări de fațadă la cheie — termoizolare, fațade ventilate, vopsire și finisaje decorative.",
-    url: "https://axicons.md",
-    siteName: "Axicons Decor Grup",
-    locale: "ro_RO",
-    type: "website",
-  },
+  title: "Axicons Decor Grup — Fațade, termoizolare și finisaje exterioare",
+  description:
+    "Amenajări de fațadă la cheie în Chișinău — termoizolare, fațade ventilate, vopsire și finisaje decorative.",
+  url: "https://axicons.md",
+  siteName: "Axicons Decor Grup",
+  images: [
+    {
+      url: "https://axicons.md/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Axicons Decor Grup — Fațade, termoizolare și finisaje exterioare",
+    },
+  ],
+  locale: "ro_RO",
+  type: "website",
+},
 };
 
 export default function RootLayout({ children }) {

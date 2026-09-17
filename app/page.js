@@ -9,9 +9,9 @@ const structuredData = {
   "@type": "GeneralContractor",
   name: "Axicons Decor Grup",
   description:
-    "Amenajări de fațadă la cheie — termoizolare ETICS, fațade ventilate, vopsire și finisaje decorative.",
-  url: "https://axiconsdecor.md",
-  telephone: "+37322000000",
+    "Amenajări de fațadă la cheie — termoizolare, fațade ventilate, vopsire și finisaje decorative.",
+  url: "https://axicons.md",
+  telephone: "+37360364435",
   areaServed: "Chișinău",
   address: {
     "@type": "PostalAddress",

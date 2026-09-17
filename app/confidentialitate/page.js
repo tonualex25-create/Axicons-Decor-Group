@@ -13,7 +13,7 @@ export default function ConfidentialitatePage() {
         <div className="wrap legal-inner">
           <div className="legal-header">
             <h1>Politica de confidențialitate</h1>
-            <p className="legal-updated">Ultima actualizare: septembrie 2026</p>
+            <p className="legal-body">Ultima actualizare: septembrie 2026</p>
           </div>
 
           <div className="legal-body">

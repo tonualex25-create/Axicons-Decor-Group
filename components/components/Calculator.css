@@ -16,7 +16,7 @@
   --calc-font-mono: "Space Grotesk", sans-serif;
   --calc-font-body: "Manrope", sans-serif;
 
-  background: var(--calc-bg);
+  background: var(--color-bg);
   color: var(--calc-ink);
   font-family: var(--calc-font-body);
   padding: 64px 0 80px;

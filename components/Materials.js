@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import "./components/Materials.css";
 
 const MATERIALS = [
@@ -8,6 +9,7 @@ const MATERIALS = [
     title: "Termoizolare",
     image: "/images/materiale/termoizolare.webp",
     badge: "CEL MAI CĂUTAT",
+    href: "/materiale/termoizolare",
   },
   {
     key: "armare",
@@ -54,12 +56,21 @@ export default function Materials() {
               </div>
               <div className="mat-body">
                 <h3>{m.title}</h3>
-                <button type="button" className="mat-btn">
-                  Vezi produse
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 8h10M9 4l4 4-4 4" />
-                  </svg>
-                </button>
+                {m.href ? (
+                  <Link href={m.href} className="mat-btn">
+                    Vezi produse
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 8h10M9 4l4 4-4 4" />
+                    </svg>
+                  </Link>
+                ) : (
+                  <button type="button" className="mat-btn">
+                    Vezi produse
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 8h10M9 4l4 4-4 4" />
+                    </svg>
+                  </button>
+                )}
               </div>
             </article>
           ))}

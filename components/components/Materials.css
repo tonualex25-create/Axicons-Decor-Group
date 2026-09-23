@@ -12,7 +12,7 @@
   --mat-font-mono: "Space Grotesk", sans-serif;
   --mat-font-body: "Manrope", sans-serif;
 
-  background: var(--mat-bg);
+  background: var(--color-bg);
   color: var(--mat-ink);
   font-family: var(--mat-font-body);
   padding: 64px 0 80px;

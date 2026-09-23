@@ -3,6 +3,7 @@ import Works from "@/components/Works";
 import Calculator from "@/components/Calculator";
 import Benefits from "@/components/Benefits";
 import Contact from "@/components/Contact";
+import Materials from "@/components/Materials";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -29,6 +30,7 @@ export default function Home() {
       />
        < Hero />
        < Calculator />
+       < Materials />
        < Benefits />
        <Contact />
     </main>

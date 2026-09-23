@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.materials {
+  --mat-bg: #e9eff5;
+  --mat-surface: #ffffff;
+  --mat-surface-2: #f3f6fa;
+  --mat-ink: #0f2136;
+  --mat-ink-soft: #647184;
+  --mat-border: #d8e1e9;
+  --mat-accent: #2f8fd6;
+  --mat-font-display: "Anton", sans-serif;
+  --mat-font-mono: "Space Grotesk", sans-serif;
+  --mat-font-body: "Manrope", sans-serif;
+
+  background: var(--mat-bg);
+  color: var(--mat-ink);
+  font-family: var(--mat-font-body);
+  padding: 64px 0 80px;
+  scroll-margin-top: 90px;
+}
+
+.materials .wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.materials .mat-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.materials .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--mat-font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  color: var(--mat-ink-soft);
+  margin: 0 0 14px;
+}
+.materials .eyebrow .tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--mat-ink);
+  font-weight: 700;
+}
+.materials .eyebrow svg {
+  width: 11px;
+  height: 11px;
+  color: var(--mat-accent);
+}
+.materials .mat-head h2 {
+  font-family: var(--mat-font-display);
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 32px);
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: 0;
+  margin: 0;
+}
+.materials .mat-head p {
+  margin: 0;
+  max-width: 42ch;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--mat-ink-soft);
+}
+
+.materials .mat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+@media (max-width: 900px) {
+  .materials .mat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .materials .mat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.materials .mat-card {
+  position: relative;
+  background: var(--mat-surface);
+  border: 1px solid var(--mat-border);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.materials .mat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -20px rgba(15, 33, 54, 0.35);
+}
+
+.materials .mat-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  font-family: var(--mat-font-body);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: var(--mat-accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.materials .mat-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--mat-surface-2);
+  overflow: hidden;
+}
+.materials .mat-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.materials .mat-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+.materials .mat-body h3 {
+  margin: 0;
+  font-family: var(--mat-font-display);
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--mat-ink);
+}
+
+.materials .mat-btn {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--mat-accent);
+  border: 1.5px solid var(--mat-accent);
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-family: var(--mat-font-body);
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.materials .mat-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.15s ease;
+}
+.materials .mat-btn:hover {
+  background: var(--mat-accent);
+  color: #fff;
+}
+.materials .mat-btn:hover svg {
+  transform: translateX(3px);
+}

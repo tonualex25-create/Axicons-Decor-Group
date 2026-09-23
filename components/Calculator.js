@@ -297,9 +297,9 @@ export default function Calculator() {
               <p className="res-note">
                 * Preț estimativ. Costul final se stabilește după evaluarea gratuită la fața locului.
               </p>
-              <button className="btn-ghost" type="button">
+              <a className="btn-ghost" href="#materiale">
                 Vezi materialele de lucru
-              </button>
+              </a>
             </div>
           </div>
         </div>

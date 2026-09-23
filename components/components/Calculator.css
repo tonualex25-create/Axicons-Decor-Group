@@ -523,6 +523,10 @@
 .calculator .btn-ghost {
   margin-top: 16px;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   background: transparent;
   color: rgba(234, 241, 248, 0.85);
   border: 1.5px solid rgba(234, 241, 248, 0.3);
@@ -531,6 +535,7 @@
   font-family: var(--calc-font-body);
   font-weight: 700;
   font-size: 13.5px;
+  text-decoration: none;
   cursor: pointer;
 }
 

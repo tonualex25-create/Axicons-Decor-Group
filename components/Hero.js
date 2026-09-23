@@ -25,7 +25,7 @@ export default function Hero() {
           <p className="hero-lead">
             Axicons Decor Grup se ocupă de renovări, finisaje și amenajări la cheie —
             de la primul metru pătrat măsurat până la ultimul detaliu montat.
-            O singură echipă, coordonată de la plan până la predare.
+            
           </p>
 
           <div className="hero-actions">

@@ -1,0 +1,283 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  color: #fff;
+  background: var(--hero-navy);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.on-hero {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+
+header.on-hero.scrolled,
+header.on-hero.is-open {
+  background: color-mix(in srgb, var(--hero-navy) 88%, transparent);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: 0 10px 30px -20px rgba(0, 0, 0, 0.6);
+}
+
+.nav-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: var(--wrap-max);
+  margin: 0 auto;
+  padding: 22px var(--wrap-pad);
+  transition: padding 0.3s ease;
+}
+
+header.scrolled .nav-wrap {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+header :focus-visible {
+  outline: 2px solid var(--hero-sky);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: none;
+}
+
+.brand .brand-mark {
+  height: 50px;
+  width: auto;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-weight: 900;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  border-radius: 999px;
+  background: rgba(15, 34, 51, 0.28);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+header nav {
+  margin: 0 auto;
+}
+
+.nav-links a {
+  display: block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.86);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.nav-links a[aria-current] {
+  background: #fff;
+  color: var(--hero-navy);
+}
+
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 18px 5px 5px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.nav-phone-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(191, 227, 247, 0.14);
+  color: var(--hero-sky);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nav-phone-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.nav-phone-number {
+  position: relative;
+}
+
+.nav-phone-number::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--hero-sky);
+  transition: right 0.35s cubic-bezier(.2, .7, .1, 1);
+}
+
+.nav-phone:hover,
+.nav-phone:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.nav-phone:hover .nav-phone-icon,
+.nav-phone:focus-visible .nav-phone-icon {
+  background: var(--hero-blue);
+  color: #fff;
+}
+
+.nav-phone:hover .nav-phone-icon svg,
+.nav-phone:focus-visible .nav-phone-icon svg {
+  animation: phone-ring 0.7s ease;
+}
+
+.nav-phone:hover .nav-phone-number::after,
+.nav-phone:focus-visible .nav-phone-number::after {
+  right: 0;
+}
+
+@keyframes phone-ring {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-14deg); }
+  40% { transform: rotate(12deg); }
+  60% { transform: rotate(-8deg); }
+  80% { transform: rotate(5deg); }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 1340px) {
+  .nav-wrap {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-wrap {
+    flex-wrap: wrap;
+    gap: 14px 16px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  header.scrolled .nav-wrap {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .brand .brand-mark {
+    height: 44px;
+  }
+
+  .brand-name {
+    font-size: 27px;
+  }
+
+  header nav {
+    margin: 0;
+  }
+
+  .nav-toggle {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(15, 34, 51, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .nav-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-phone {
+    order: 3;
+    flex: 1 0 100%;
+    justify-content: center;
+    padding: 6px 18px 6px 6px;
+    border-radius: 999px;
+    background: rgba(15, 34, 51, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% - 6px);
+    left: 16px;
+    right: 16px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 22px;
+    background: rgba(15, 34, 51, 0.95);
+  }
+
+  header.is-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-name {
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-phone:hover .nav-phone-icon svg {
+    animation: none;
+  }
+}

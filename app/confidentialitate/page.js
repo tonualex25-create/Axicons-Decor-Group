@@ -1,9 +1,10 @@
-import "./page.css";
+import "@/styles/legal.css";
 
 export const metadata = {
   title: "Politica de confidențialitate",
   description:
-    "Cum colectează, folosește și protejează Axicons Decor Grup S.R.L. datele tale personale.",
+    "Ce date colectează Axicons Decor Grup S.R.L. prin formularul de contact, cum le folosim și le protejăm și cum poți cere ștergerea lor.",
+  alternates: { canonical: "/confidentialitate" },
 };
 
 export default function ConfidentialitatePage() {
@@ -18,7 +19,7 @@ export default function ConfidentialitatePage() {
 
           <div className="legal-body">
             <p>
-              Axicons Decor Grup S.R.L. („noi", „firma") respectă confidențialitatea
+              Axicons Decor Grup S.R.L. („noi”, „firma”) respectă confidențialitatea
               datelor tale personale. Acest document explică ce date colectăm prin
               intermediul site-ului axicons.md, de ce, cum le folosim și ce drepturi ai.
             </p>

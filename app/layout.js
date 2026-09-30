@@ -1,66 +1,58 @@
-import { Bebas_Neue, Manrope, Roboto_Mono } from "next/font/google";
+import { Mona_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import SectionLinks from "@/components/layout/SectionLinks";
+import { SITE } from "@/lib/site";
 
-const bebasNeue = Bebas_Neue({
+const monaSans = Mona_Sans({
   subsets: ["latin", "latin-ext"],
-  weight: "400",
-  variable: "--font-display",
-});
-
-const manrope = Manrope({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-body",
-});
-
-const robotoMono = Roboto_Mono({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600"],
-  variable: "--font-mono",
+  axes: ["wdth"],
+  variable: "--font-mona",
+  display: "swap",
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
-    default: "Axicons Decor Grup — Fațade, termoizolare și finisaje exterioare",
-    template: "%s — Axicons Decor Grup",
+    default: "Axicons Decor Grup — Termoizolare și fațade la cheie în Chișinău",
+    template: "Axicons Decor Grup — %s",
   },
   description:
-    "Amenajări de fațadă la cheie în Chișinău — termoizolare, fațade ventilate, vopsire și finisaje decorative. Consultanță gratuită și deviz transparent.",
+    "Termoizolare, armare și finisaj decorativ pentru fațade, la cheie, în Chișinău și în toată Moldova. Calculează prețul online și cere o evaluare gratuită.",
+  applicationName: SITE.name,
   keywords: [
-    "fațade axicons",
-    "termoizolare fațadă",
-    "fațade ventilate",
-    "renovare fațadă",
+    "termoizolare fațadă Chișinău",
+    "termoizolare fațadă Moldova",
+    "termoizolare casă",
+    "fațade la cheie",
+    "finisaj decorativ fațadă",
+    "tencuială decorativă",
+    "polistiren fațadă",
     "Axicons Decor Grup",
-    "axicons",
-    "companie de constructii",
-    "constructii",
   ],
   openGraph: {
-  title: "Axicons Decor Grup — Fațade, termoizolare și finisaje exterioare",
-  description:
-    "Amenajări de fațadă la cheie în Chișinău — termoizolare, fațade ventilate, vopsire și finisaje decorative.",
-  url: "https://axicons.md",
-  siteName: "Axicons Decor Grup",
-  images: [
-    {
-      url: "https://axicons.md/og-image.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Axicons Decor Grup — Fațade, termoizolare și finisaje exterioare",
-    },
-  ],
-  locale: "ro_RO",
-  type: "website",
-},
+    type: "website",
+    locale: "ro_MD",
+    siteName: SITE.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+export const viewport = {
+  themeColor: "#0F2233",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ro" className={`${bebasNeue.variable} ${manrope.variable} ${robotoMono.variable}`}>
+    <html lang="ro" className={monaSans.variable}>
       <body>
+        <SectionLinks />
         <Header />
         {children}
         <Footer />

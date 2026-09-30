@@ -5,6 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./Header.css";
 import Logo from "@/components/ui/Logo";
+import { SITE } from "@/lib/site";
+
+const PhoneIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true">
+    <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
+  </svg>
+);
 
 const links = [
   { href: "/", id: "top", label: "Acasă" },
@@ -113,16 +120,25 @@ export default function Header() {
                 </Link>
               </li>
             ))}
+            <li className="nav-links-call">
+              <a href={`tel:${SITE.phone}`} onClick={() => setIsOpen(false)}>
+                <span className="nav-links-call-icon"><PhoneIcon /></span>
+                <span>
+                  <span className="nav-links-call-title">Telefonează acum</span>
+                  <span className="nav-links-call-number">{SITE.phoneDisplay}</span>
+                </span>
+              </a>
+            </li>
           </ul>
         </nav>
 
-        <a className="nav-phone" href="tel:+37360364435" aria-label="Sună la +373 60 364 435">
-          <span className="nav-phone-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
-              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
-            </svg>
-          </span>
-          <span className="nav-phone-number">+373 60 364 435</span>
+        <a className="nav-phone" href={`tel:${SITE.phone}`} aria-label={`Sună la ${SITE.phoneDisplay}`}>
+          <span className="nav-phone-icon"><PhoneIcon /></span>
+          <span className="nav-phone-number">{SITE.phoneDisplay}</span>
+        </a>
+
+        <a className="nav-call" href={`tel:${SITE.phone}`} aria-label={`Sună la ${SITE.phoneDisplay}`}>
+          <PhoneIcon />
         </a>
 
         <button

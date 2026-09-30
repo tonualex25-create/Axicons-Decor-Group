@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./Header.css";
@@ -21,6 +21,19 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [section, setSection] = useState("top");
+
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    const setHeight = () =>
+      document.documentElement.style.setProperty("--header-h", `${Math.ceil(header.offsetHeight)}px`);
+    setHeight();
+    const observer = new ResizeObserver(setHeight);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 12);
@@ -80,7 +93,7 @@ export default function Header() {
   ].filter(Boolean).join(" ");
 
   return (
-    <header className={classes}>
+    <header ref={headerRef} className={classes}>
       <div className="nav-wrap">
         <Link href="/" className="brand" aria-label="Axicons Decor Grup, prima pagină" onClick={() => setIsOpen(false)}>
           <Logo light />

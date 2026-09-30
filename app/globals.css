@@ -57,14 +57,8 @@ a {
   padding: 0 var(--wrap-pad);
 }
 
-section[id] {
-  scroll-margin-top: 90px;
-}
-
-@media (max-width: 1200px) {
-  section[id] {
-    scroll-margin-top: 140px;
-  }
+html {
+  scroll-padding-top: calc(var(--header-h, 104px) + 16px);
 }
 
 html {
